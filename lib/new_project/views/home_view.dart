@@ -185,7 +185,10 @@ class HomeView extends StatelessWidget {
                   backgroundColor: Colors.orange,
                   maximumSize: const Size(180, 80),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  BlocProvider.of<CounterCubit>(context)
+                      .teamReset(buttonNumber: 0);
+                },
                 child: const Text(
                   'Reset',
                   style: TextStyle(
